@@ -1,0 +1,14 @@
+[masters]
+
+[masters:children]
+nodetype_master
+
+[etcd]
+
+[etcd:children]
+masters
+
+[nodes]
+
+[nodes:children]
+nodetype_managed
