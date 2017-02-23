@@ -16,6 +16,6 @@
 
 . ./init.sh
 
-inventory=${INVENTORY:-${INVENTORY_DIR}/inventory}
+inventory=${INVENTORY:-${INVENTORY_DIR}/}
 # no configure tag as it will reset everything to defaults
-ansible_playbook ${inventory} ${PLAYBOOKS_DIR}/deploy-node.yml --tags "install,restart" "$@"
+ansible_playbook -i ${inventory} ${PLAYBOOKS_DIR}/deploy-node.yml --tags "install,restart" "$@"

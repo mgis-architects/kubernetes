@@ -16,9 +16,9 @@
 
 . ./init.sh
 
-inventory=${INVENTORY:-${INVENTORY_DIR}/inventory}
+inventory=${INVENTORY:-${INVENTORY_DIR}/}
 ansible_playbook \
-  ${inventory} ${PLAYBOOKS_DIR}/deploy-etcd.yml \
+  -i ${inventory} ${PLAYBOOKS_DIR}/deploy-etcd.yml \
   --tags "restart" \
   --extra-vars "etcd_modified=true" \
   "$@"
