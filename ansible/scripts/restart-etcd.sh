@@ -18,7 +18,7 @@
 
 inventory=${INVENTORY:-${INVENTORY_DIR}/}
 ansible_playbook \
-  -i ${inventory} ${PLAYBOOKS_DIR}/deploy-etcd.yml \
+   ${inventory} ${PLAYBOOKS_DIR}/deploy-etcd.yml \
   --tags "restart" \
   --extra-vars "etcd_modified=true" \
   "$@"

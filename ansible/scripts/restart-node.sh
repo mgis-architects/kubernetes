@@ -18,7 +18,7 @@
 
 inventory=${INVENTORY:-${INVENTORY_DIR}/}
 ansible_playbook \
-  -i ${inventory} ${PLAYBOOKS_DIR}/deploy-node.yml \
+   ${inventory} ${PLAYBOOKS_DIR}/deploy-node.yml \
   --tags "restart" \
   --extra-vars "kubelet_modified=true proxy_modified=true" \
   "$@"

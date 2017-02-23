@@ -17,4 +17,4 @@
 . ./init.sh
 
 inventory=${INVENTORY:-${INVENTORY_DIR}/}
-ansible_playbook -i ${inventory} ${PLAYBOOKS_DIR}/deploy-addons.yml "$@"
+ansible_playbook ${inventory} ${PLAYBOOKS_DIR}/deploy-addons.yml "$@"

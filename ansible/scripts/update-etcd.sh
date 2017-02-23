@@ -18,4 +18,4 @@
 
 inventory=${INVENTORY:-${INVENTORY_DIR}/}
 # no configure tag as it will reset everything to defaults
-ansible_playbook -i ${inventory} ${PLAYBOOKS_DIR}/deploy-etcd.yml --tags "install,restart" "$@"
+ansible_playbook ${inventory} ${PLAYBOOKS_DIR}/deploy-etcd.yml --tags "install,restart" "$@"
