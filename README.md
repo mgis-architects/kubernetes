@@ -32,6 +32,8 @@ Use terraform to build infrastructure required for k8s run.
 While doing so you will have to generate SSL key which will
 subsequently be used with Ansible.
 
+[Terraform for k8s](https://github.com/mgis-architects/terraform/tree/master/azure/k8s.form)
+
 ### Step #4: Execute Ansible build
 
 Unfortunately due to Ansible bug delegate_to directive is not handled
