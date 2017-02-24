@@ -2,11 +2,11 @@
 
 ## Install Ansible
 
-### Step #1: Add the EPEL Repository
+**Add the EPEL Repository**
 
 rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
 
-### Step #2: The Installation
+**Install Ansible rpm**
 
 ```
 yum -y install ansible
@@ -26,7 +26,13 @@ pip install --upgrade pip
 pip install "azure==2.0.0rc5"
 pip install "msrestazure"
 ```
-### Step #3: Provision the infrastructure
+## Generate RSA keypair
+
+Use your favorite tool to generate RSA keypair for the host authentication
+
+# Install k8s cluster
+
+## Step #1: Provision the infrastructure
 
 Use terraform to build infrastructure required for k8s run. 
 While doing so you will have to generate SSL key which will
@@ -34,7 +40,7 @@ subsequently be used with Ansible.
 
 [Terraform for k8s](https://github.com/mgis-architects/terraform/tree/master/azure/k8s.form)
 
-### Step #4: Execute Ansible build
+## Step #2: Execute Ansible build
 
 Unfortunately due to Ansible bug delegate_to directive is not handled
 correctly for dynamic inventory and we have to use static one.
